@@ -8,7 +8,7 @@
 </head>
 <body>
 <main class="container">
-  <h1>List of those foocking cats</h1>
+  <h1>List of the cats</h1>
   <table class="table table-dark text-center align-middle">
     <thead>
     <tr>
@@ -19,6 +19,11 @@
     </tr>
     </thead>
     <tbody>
+    <% if (cats.isEmpty()){ %>
+      <tr>
+      <td> No cats are there at the moment </td>
+      </tr>
+    <% } %>
     <% for (Cat c : cats) {%>
     <tr>
       <td> <%= c.getName()%> </td>
